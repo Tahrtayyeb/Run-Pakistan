@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>#kneeDropdown {
+        left: 100%;
+        top: 15px;
+    }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+        <!-- Navbar -->
+        <nav class="bg-black p-2 mt-0 fixed w-full z-10 top-0 bg-opacity-90 bg-clip-padding">
+                <div class="container mx-auto flex flex-wrap items-center justify-between">
+                        <div class="flex items-center">
+                                <a href="/dist/index.html">
+                                <img src="/dist/logo.png" alt="Logo" class="h-16 mt-1 md:h-22">
+                                </a>
+                        </div>
+                        <!-- Hamburger Icon for Mobile --> 
+                        <div class="md:hidden">
+                                <button id="mobileMenuBtn" class="text-white focus:outline-none">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                                </button>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div id="mobileNavMenu" class="hidden absolute w-full bg-gray-800 text-white z-10 mt-96">
+                                <div class="flex flex-col items-center">
+                                        <a href="/dist/index.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Home</a>
+                                        <a href="/dist/Events/ftcLahore.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Lahore Marathon</a>
+                                        <a href="/dist/Events/iruIslamabad2025.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Islamabad Marathon</a>
+                                        <a href="/dist/Events/svrcKarachi.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Karachi Marathon</a>
+                                        <a href="/dist/Training/10km.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">10km Training Plan</a>
+                                        <a href="/dist/Training/hm.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Half Marathon Training Plan</a>
+                                        <a href="/dist/shop.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Shop</a>
+                                        <a href="/dist/contact.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Contact</a>
+                                </div>
+                        </div>
+                        <!-- Navbar Links -->
+                        <div id="navbarLinks" class="hidden md:flex md:items-center md:w-auto">
+                                <div class="flex items-center space-x-10">
+                                        <div class="relative dropdown">
+                                                <button id="eventsBtn" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-5 py-3 focus:outline-none dropdown-button">Events</button>
+                                                <ul id="eventsDropdown" class="hidden absolute bg-gray-800 text-white p-2 space-y-2 w-60 rounded-xl dropdown-menu items-center">
+                                                        <!-- Events dropdown items -->
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Events/mtrGaliyat.html" target="_blank" rel="noopener noreferrer">Galiyat Mountain Trail 2024</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Events/mtrBackyard2024.html" target="_blank" rel="noopener noreferrer">Margalla Backyard Ultra 2024</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Events/ircIslamabad2024.html" target="_blank" rel="noopener noreferrer">Capital Half Marathon 2024</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Events/svrcKarachi.html" target="_blank" rel="noopener noreferrer">Karachi Marathon 2025</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Events/iruIslamabad2025.html" target="_blank" rel="noopener noreferrer">Islamabad Marathon 2025</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Events/ftcLahore.html" target="_blank" rel="noopener noreferrer">Lahore Marathon 2025</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Events/mtrHill.html" target="_blank" rel="noopener noreferrer">Inter Club Half Marathon 2025</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Events/wmm.html" target="_blank" rel="noopener noreferrer">World Major Marathons</a></li>
+                                                </ul>
+                                        </div>
+                                        <!-- Training Plan -->        
+                                        <div class="relative dropdown">
+                                                <button id="trainingPlansBtn" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-5 py-3 focus:outline-none dropdown-button">Training Plans</button>
+                                                <ul id="trainingPlansDropdown" class="hidden absolute bg-gray-800 text-white p-2 space-y-2 w-48 rounded-xl dropdown-menu">
+                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Training/5km.html" target="_blank" rel="noopener noreferrer">5K Training Plan</a></li>
+                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Training/10km.html" target="_blank" rel="noopener noreferrer">10K Training Plan</a></li>
+                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Training/hm.html" target="_blank" rel="noopener noreferrer">Half Marathon Training Plan</a></li>
+                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Training/fm.html" target="_blank" rel="noopener noreferrer">Marathon Training Plan</a></li>
+                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Training/ultra.html" target="_blank" rel="noopener noreferrer">Ultra Marathon Training Plan</a></li>
+                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Training/2080.html" target="_blank" rel="noopener noreferrer">80/20 Rule of Life</a></li>
+                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Training/vo2.html" target="_blank" rel="noopener noreferrer">VO<sub>2</sub> Max for Runners</a></li>
+                                                </ul>
+                                        </div>
+                                         <!-- Health -->                                
+                                        <div class="relative dropdown">
+                                                <button id="healthBtn" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-5 py-3 focus:outline-none dropdown-button" style="width: 100%;">Health and Injuries</button>
+                                                <ul id="healthDropdown" class="hidden absolute bg-gray-800 text-white p-2 space-y-2 w-48 rounded-xl dropdown-menu">
+                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150">
+                                                        <!-- Knee -->
+                                                        <button id="kneeBtn" class="text-l font-bold text-white w-48 hover:rounded-full ease-in-out duration-150 py-3 text-left focus:outline-none dropdown-button">Knee</button>
+                                                        <div id="kneeDropdown" class="hidden absolute bg-gray-800 text-white w-48 rounded-md border border-gray-700 ">
+                                                        <ul>
+                                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/Knee/comeBack.html" target="_blank" rel="noopener noreferrer">Comeback After Injury</a></li>
+                                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/Knee/commonKnee.html" target="_blank" rel="noopener noreferrer">Common Knee Injuries</a></li>
+                                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/Knee/isRunningBad.html" target="_blank" rel="noopener noreferrer">Is Running Bad for Knees</a></li>
+                                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/Knee/kneeRehab.html" target="_blank" rel="noopener noreferrer">Knee Rehab Exercises</a></li>
+                                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/Knee/overUse.html" target="_blank" rel="noopener noreferrer">Overuse Injury in Runners</a></li>
+                                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/Knee/runningSurface.html" target="_blank" rel="noopener noreferrer">Running Surface and Knee Pain</a></li>
+                                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/Knee/runningTech.html" target="_blank" rel="noopener noreferrer">Running Technique</a></li>
+                                                                <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/Knee/strength.html" target="_blank" rel="noopener noreferrer">Strength for Knee Pain</a></li>
+                                                                </ul>
+                                                        </div>
+                                                        </li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/hamstring.html" target="_blank" rel="noopener noreferrer">Hamstring Injury</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/injuryPrevention.html" target="_blank" rel="noopener noreferrer">Injury Prevention Techniques</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/itband.html" target="_blank" rel="noopener noreferrer">IT Band Injury in Runner</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/nutrition.html" target="_blank" rel="noopener noreferrer">Nutrition for Runners</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/piriformis.html" target="_blank" rel="noopener noreferrer">Piriformis Syndrome</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/planter.html" target="_blank" rel="noopener noreferrer">Plantar Fasciitis</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/recoveryTech.html" target="_blank" rel="noopener noreferrer">Recovery Techniques</a></li>
+                                                        <li class="hover:bg-green-500 text-white hover:rounded-2xl ease-in-out duration-150"><a href="/dist/Health/shin.html" target="_blank" rel="noopener noreferrer">Shin Splints</a></li>
+                                                </ul>
+                                        </div>
+                                        <!-- New -->
+                                        <div class="relative dropdown">
+                                                <a href="/dist/News/newsPage.html" target="_blank">
+                                                <button id="newsBtn" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-5 py-3 focus:outline-none dropdown-button">News</button>
+                                                </a>
+                                        </div> 
+                                        <!--Shop-->
+                                        <div class="relative">
+                                                <a href="/dist/shop.html" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-5 py-3 focus:outline-none">Shop</a>
+                                        </div>
+                                        <!--Contact-->
+                                        <div class="relative">
+                                                <a href="/dist/contact.html" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-5 py-3 focus:outline-none">Contact</a>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </nav>
+
+        <script src="/dist/script.js" type="module"></script>
+        <script src="/dist/navbar.js" type="module"></script>
+        <script src="/dist/search.js" type="module"></script>
+</body>
+</html>

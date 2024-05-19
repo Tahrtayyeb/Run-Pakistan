@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Run Pakistan</title>
+    <meta name="description" content="Connect with Run Pakistan for any queries, feedback, or information. Email us at info@runpakistan.com or call us at +92 333 444 2453. Follow us on Instagram for updates.">
+    <meta name="keywords" content="Run Pakistan, contact, email, phone, social media, Instagram, running clubs, cycling clubs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.runpakistan.com/contact.html">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100">
+    <!-- Navbar Container -->
+    <div id="navbar-container" class="mt-2"></div>
+    
+            <div class="mb-8 text-center h-28 mt-32"> <!-- Increase height here -->
+                <!-- Replace this with your ad code 
+                <img src="ad1.jpg" alt="Advertisement 1" class="mx-auto h-full">
+            </div>
+            -->
+            <main class="flex-grow container mx-auto p-8 bg-white rounded-lg shadow-lg">
+                <h1 class="text-3xl font-semibold mb-4 text-green-600">Contact Us</h1>
+                <p class="mb-4 text-gray-700">We're thrilled that you're interested in connecting with us! Whether you have questions, feedback, or just want to say hello, we'd love to hear from you. Feel free to reach out through any of the following channels:</p>
+                <ul class="list-disc pl-6 mb-4">
+                    <li class="text-left"><strong>Email:</strong> <a href="mailto:info@runpakistan.com" class="text-blue-500 hover:underline">info@runpakistan.com</a></li>
+                    <li class="text-left"><strong>Phone:</strong> +92 333 444 2453 </li>
+                    <li class="text-left"><strong>Social Media:</strong> Connect with us on <a href="https://www.instagram.com/pakistanrun/" class="text-blue-500 hover:underline" target="_blank">Instagram</a></li>
+                </ul>
+                <form id="contact-form" class="mb-8">
+                    <label for="query" class="block text-gray-700 font-semibold mb-2 text-left">Have a query or suggestion? Let us know:</label>
+                    <textarea id="query" name="query" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                    <button type="submit" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">Submit</button>
+                    <div id="confirmation" style="display: none;">Thank you for your suggestion!
+                    </div>
+                </form>
+            </main>
+
+            <!-- Replace this with your ad code 
+            <div class="mb-8 text-center h-28 mt-10">
+                <img src="ad2.jpg" alt="Advertisement 2" class="mx-auto h-full">
+            </div>
+            -->
+
+            <!-- Footer Container -->
+            <div class="mt-auto" id="footer-container">
+            </div>
+    <script src="script.js"></script>
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            submitSuggestion(); // Call the function to handle the suggestion submission
+        });
+
+        function submitSuggestion() {
+            // Get the value of the query textarea
+        var suggestion = document.getElementById("query").value;
+
+        // Store the query locally (you can use Local Storage or Session Storage)
+        localStorage.setItem("query", suggestion);
+
+        // Show confirmation message
+        document.getElementById("confirmation").style.display = "block";
+    }
+</script>
+</body>
+</html>

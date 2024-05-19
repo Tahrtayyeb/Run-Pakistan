@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-gray-700">
+    
+    <!-- Search Results -->
+    <div class="relative">
+        <input type="text" id="searchInput" class="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none" placeholder="Search...">
+        <ul id="searchResults" class="absolute z-10 bg-gray-700 border rounded-md mt-1 py-1 w-full hidden"></ul>
+    </div>
+      
+    <!-- Content -->
+    <main class="px-4 lg:px-0"> <!-- Adjust padding as needed -->
+        <section id="event-results">
+            <ul id="event-list" class="hover:text-green-500">
+                <!-- Event search results will be dynamically inserted here -->  
+            </ul>
+        </section>
+        <section id="health-results">
+            <ul id="health-list" class="hover:text-green-500">
+                <!-- Health & injuries search results will be dynamically inserted here -->
+            </ul>
+        </section>
+        <section id="training-results">
+            <ul id="training-list" class="hover:text-green-500">
+                <!-- Training plan search results will be dynamically inserted here -->
+            </ul>
+        </section>
+    </main>
+    
+  
+    <!-- Script -->
+    <script src="script.js" type="module"></script>
+    <script src="search.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>runPAKISTAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Content -->
+    <div class="mx-auto px-4 lg:px-0">
+
+        <!-- Hero Section -->
+        <div class="hero-section relative h-screen flex items-center justify-center bg-cover bg-center mx-auto" style="background-image: url('./images/bg-2.jpg')">
+            <div class="text-white text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Pakistan First Running Blog</h1>
+                <h2 class="text-lg md:text-3xl mb-8">Free Training Plans from the World's Best Running Experts</h2>
+                <p class="text-lg md:text-2xl mb-8">Discover Amazing Events and Stay Updated!</p>
+                <div id="search-container" class="absolute bottom-0 left-0 w-full p-4 bg-gray-800 bg-opacity-75">
+                <p class="text-lg text-white mb-2">Search for event details and training plans:</p>
+                <iframe src="./search-results.html" frameborder="0" scrolling="no" style="width: 100%; height: 100px;"></iframe>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Space for ads 
+    <div class="mt-20 text-center">
+        <h2 class="text-xl font-bold mb-4">Advertisements</h2>
+        <div class="border border-gray-300 p-4 rounded-md bg-white shadow-md">
+            <p>This is an ad. You can place your ad content here.</p>
+        </div>
+    </div>
+    -->
+
+    <!-- Upcoming events -->
+        <div class="relative max-w-full flex items-center justify-center bg-yellow-200 py-2">
+            <h2 class="text-3xl md:text-4xl font-bold text-black mb-2">Upcoming Events</h2>
+        </div>
+        <div id="events-section" class="overflow-x-auto whitespace-nowrap  bg-yellow-200 px-3 py-8">
+            <div id="events-container" class="flex bg-yellow-200">
+                <!-- Event cards will be dynamically added here -->
+            </div>
+        </div>
+
+    <!-- News Section -->
+    <div class="relative max-w-full flex items-center justify-center bg-emerald-400 py-2">
+        <h2 class="text-3xl md:text-4xl font-bold text-black mb-2"><a href="/dist/News/newsPage.html" target="_blank">News</a></h2>
+    </div>
+    <div class=" bg-emerald-400">
+    <section id="news-container" class="container mx-auto px-4 py-8 mt-0"> <!-- Adjusted mt-0 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- News Cards will be dynamically generated here -->
+        </div>
+    </section>
+    </div>
+        
+    <!-- Training plans -->
+    <div class="relative max-w-full flex items-center justify-center bg-cyan-300 py-2">
+        <h2 class="text-3xl md:text-4xl font-bold text-black mb-2">Training Plans</h2>
+    </div>
+    <div id="training-plans" class="relative max-w-full px-3 bg-cyan-300 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Training plan cards will be dynamically added here -->
+    </div>
+
+    <!-- Health & Injuries -->
+    <div class="relative max-w-full flex items-center justify-center bg-red-300 py-2">
+        <h2 class="text-3xl md:text-4xl font-bold text-black mb-2">Health & Injuries</h2>
+    </div>
+    <div id="healthAndInjuriesContainer" class="relative max-w-full px-3 bg-red-300 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Health & injury cards will be dynamically added here -->
+    </div>
+
+    <!-- Space for ads
+    <div class="mt-20 text-center">
+        <h2 class="text-xl font-bold mb-4">Advertisements</h2>
+        <div class="border border-gray-300 p-4 rounded-md bg-white shadow-md">
+            <p>This is an ad. You can place your ad content here.</p>
+        </div>
+    </div>
+    -->
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js" type="module"></script>
+    <script src="navbar.js" type="module"></script>
+    <script src="footer.js" type="module"></script>
+    <script src="search.js" type="module"></script>
+</body>
+</html>

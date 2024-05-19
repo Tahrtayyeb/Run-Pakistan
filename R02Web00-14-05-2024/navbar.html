@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>runPAKISTAN - Navbar</title>
+    <link rel="canonical" href="https://runpakistan.com/">
+    <meta name="robots" content="index, follow"> <!-- Allows search engines to index and follow links on the page -->
+    <meta name="description" content="Explore runPAKISTAN's navigation menu for easy access to various sections of the website, including events, training plans, health resources, news, and more.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* Center logo on mobile */
+    @media screen and (max-width: 768px) {
+        .logo-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-container img {
+            margin: auto;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+    }/* Set the background color for navbar and dropdown menus */
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #6c6c6c; /* Set the same color as navbar */
+    text-align: center;
+    min-width: auto; /* Remove fixed width */
+    padding: 12px;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(1, 202, 52, 0.813); /* Add shadow for better visibility */
+    border-radius: 20px;
+    left: 50%; /* Center the dropdown horizontally */
+    transform: translateX(-50%); /* Align the center of the dropdown with the center of the parent */
+}
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Set width dynamically based on content width */
+.dropdown-menu {
+    width: max-content; /* Set width based on content */
+}
+
+.dropdown-menu li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.dropdown-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #30b453;
+    border-radius: 10px;
+}
+
+    #kneeBtn {
+    width: 100%; /* Make the button take the full width of its container */
+    position: relative;
+}
+#kneeBtn:hover {
+    background: #30b453; /* Make the button take the full width of its container */
+}
+#kneeDropdown {
+    display: none; /* Hide the knee dropdown by default */
+    position: absolute;
+    background-color: #6c6c6c;
+    color: #30b453;
+    top: 0; /* Position it at the same height as the knee button */
+    right: -240px; /* Align it to the right side of the knee button */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 5px rgba(1, 202, 52, 0.813); /* Add shadow for better visibility */
+}
+
+#kneeDropdown ul {
+    list-style: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+}
+
+#kneeDropdown li {
+    padding: 5px 10px; /* Adjust padding as needed */
+    background-color: transparent; /* Set background color of list items to transparent */
+}
+
+#kneeBtn:hover + #kneeDropdown,
+#kneeDropdown:hover {
+    display: block; /* Show the knee dropdown when the "Knee" button is hovered over or when the dropdown itself is hovered over */
+}
+
+
+#kneeBtn:hover + #kneeDropdown {
+    transition-delay: 0.3s; /* Adjust the delay time as needed */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-gray-700 fixed w-11/12 z-10 bg-clip-padding bg-opacity-90 rounded-full" style="margin-left: 30px;">
+        <div class="mx-2 flex flex-wrap items-center justify-between">
+            <!-- Logo and Search Bar -->
+            <div class="flex items-center logo-container">
+                <a href="index.html">
+                    <img src="logo.png" alt="Logo" class="h-16 mt-1 md:h-22">
+                </a>
+            </div>
+            <!-- Hamburger Icon for Mobile -->
+            <div class="md:hidden">
+                <button id="mobileMenuBtn" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileNavMenu" class="hidden absolute w-full bg-gray-700 text-white z-10 rounded-xl">
+                <div class="flex flex-col items-center mt-10">
+                    <a href="index.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Home</a>
+                    <a href="Events/ftcLahore.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Lahore Marathon</a>
+                    <a href="Events/iruIslamabad2025.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Islamabad Marathon</a>
+                    <a href="Events/svrcKarachi.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Karachi Marathon</a>
+                    <a href="Training/5km.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">5km Training Plan</a>
+                    <a href="Training/10km.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">10km Training Plan</a>
+                    <a href="Training/hm.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Half Marathon Training Plan</a>
+                    <a href="Training/fm.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Marathon Training Plan</a>                                        
+                    <a href="shop.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Shop</a>
+                    <a href="contact.html" class="py-2 px-6 text-white block hover:bg-green-600 hover:rounded-xl">Contact</a>
+                </div>
+            </div>
+            <!-- Navbar Links -->
+            <div id="navbarLinks" class="hidden md:flex md:items-center md:w-auto">
+                <div class="flex items-center space-x-10">
+                    <!-- Events -->
+                    <div class="dropdown">
+                        <button id="eventsBtn" class="text-l font-bold text-white hover:bg-green-500 hover:rounded-full ease-in-out duration-150 px-4 py-4 focus:outline-none dropdown-button">Events</button>
+                        <ul id="eventsDropdown" class="dropdown-menu">
+                            <!-- Events dropdown items -->
+                            <li><a href="Events/mtrGaliyat.html" target="_blank" rel="noopener noreferrer">Galiyat Mountain Trail 2024</a></li>
+                            <li><a href="Events/mtrBackyard2024.html" target="_blank" rel="noopener noreferrer">Margalla Backyard Ultra 2024</a></li>
+                            <li><a href="Events/ircIslamabad2024.html" target="_blank" rel="noopener noreferrer">Capital Half Marathon 2024</a></li>
+                            <li><a href="Events/svrcKarachi.html" target="_blank" rel="noopener noreferrer">Karachi Marathon 2025</a></li>
+                            <li><a href="Events/iruIslamabad2025.html" target="_blank" rel="noopener noreferrer">Islamabad Marathon 2025</a></li>
+                            <li><a href="Events/ftcLahore.html" target="_blank" rel="noopener noreferrer">Lahore Marathon 2025</a></li>
+                            <li><a href="Events/mtrHill.html" target="_blank" rel="noopener noreferrer">Inter Club Half Marathon 2025</a></li>
+                            <li><a href="Events/wmm.html" target="_blank" rel="noopener noreferrer">World Major Marathons</a></li>
+                        </ul>
+                    </div>
+                    <!-- Training Plans -->
+                    <div class="dropdown">
+                        <button id="trainingPlansBtn" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-4 py-3 focus:outline-none dropdown-button">Training Plans</button>
+                        <ul id="trainingPlansDropdown" class="dropdown-menu">
+                            <li><a href="Training/5km.html" target="_blank" rel="noopener noreferrer">5K Plan</a></li>
+                            <li><a href="Training/10km.html" target="_blank" rel="noopener noreferrer">10K Plan</a></li>
+                            <li><a href="Training/hm.html" target="_blank" rel="noopener noreferrer">Half Marathon Plan</a></li>
+                            <li><a href="Training/fm.html" target="_blank" rel="noopener noreferrer">Marathon Plan</a></li>
+                            <li><a href="Training/ultra.html" target="_blank" rel="noopener noreferrer">Ultra Marathon Plan</a></li>
+                            <li><a href="Training/2080.html" target="_blank" rel="noopener noreferrer">80/20 Rule of Life</a></li>
+                            <li><a href="Training/vo2.html" target="_blank" rel="noopener noreferrer">VO<sub>2</sub> Max for Runners</a></li>
+                        </ul>
+                    </div>
+                    <!-- Health -->
+                    <div class="dropdown">
+                        <button id="healthBtn" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-4 py-3 focus:outline-none dropdown-button">Injuries & Recovery</button>
+                        <ul id="healthDropdown" class="dropdown-menu">
+                            <!-- Your HTML code for the knee button and dropdown -->
+                        <div class="relative">
+                                <button id="kneeBtn" class="text-l font-bold text-white hover:bg-green-500 hover:rounded-full ease-in-out duration-150 px-4 py-4 focus:outline-none dropdown-button">Knee</button>
+                                <ul id="kneeDropdown" class="hidden absolute bg-gray-700 text-white p-2 space-y-2 w-60 rounded-xl">    
+                                    <li><a href="Health/Knee/comeBack.html" target="_blank" rel="noopener noreferrer">Comeback After Injury</a></li>
+                                    <li><a href="Health/Knee/commonKnee.html" target="_blank" rel="noopener noreferrer">Common Knee Injuries</a></li>
+                                    <li><a href="Health/Knee/isRunningBad.html" target="_blank" rel="noopener noreferrer">Is Running Bad for Knees</a></li>
+                                    <li><a href="Health/Knee/kneeRehab.html" target="_blank" rel="noopener noreferrer">Knee Rehab Exercises</a></li>
+                                    <li><a href="Health/Knee/overUse.html" target="_blank" rel="noopener noreferrer">Overuse Injury in Runners</a></li>
+                                    <li><a href="Health/Knee/runningSurface.html" target="_blank" rel="noopener noreferrer">Running Surface and Knee Pain</a></li>
+                                    <li><a href="Health/Knee/runningTech.html" target="_blank" rel="noopener noreferrer">Running Technique</a></li>
+                                    <li><a href="Health/Knee/strength.html" target="_blank" rel="noopener noreferrer">Strength for Knee Pain</a></li>
+                                </ul>
+                            <li><a href="Health/hamstring.html" target="_blank" rel="noopener noreferrer">Hamstring Injury</a></li>
+                            <li><a href="Health/injuryPrevention.html" target="_blank" rel="noopener noreferrer">Injury Prevention</a></li>
+                            <li><a href="Health/itband.html" target="_blank" rel="noopener noreferrer">IT Band Injury</a></li>
+                            <li><a href="Health/nutrition.html" target="_blank" rel="noopener noreferrer">Nutrition for Runners</a></li>
+                            <li><a href="Health/piriformis.html" target="_blank" rel="noopener noreferrer">Piriformis Syndrome</a></li>
+                            <li><a href="Health/planter.html" target="_blank" rel="noopener noreferrer">Plantar Fasciitis</a></li>
+                            <li><a href="Health/recoveryTech.html" target="_blank" rel="noopener noreferrer">Recovery Techniques</a></li>
+                            <li><a href="Health/shin.html" target="_blank" rel="noopener noreferrer">Shin Splints</a></li>
+                        </ul>
+                    </div>
+                    <!-- About -->
+                    <div>
+                        <a href="runningClub.html" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-4 py-3 focus:outline-none">Running Clubs</a>
+                    </div>
+                    <!-- News -->
+                    <div>
+                        <a href="News/newsPage.html" target="_blank" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-4 py-3 focus:outline-none">News</a>
+                    </div> 
+                    <!-- Shop 
+                    <div>
+                        <a href="shop.html" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-4 py-3 focus:outline-none">Shop</a>
+                    </div>
+                    -->
+                    <!-- Contact -->
+                    <div>
+                        <a href="contact.html" class="text-l font-bold text-white hover:bg-green-600 hover:rounded-full ease-in-out duration-150 px-4 py-3 focus:outline-none">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="script.js" type="module"></script>
+    <script src="navbar.js" type="module"></script>
+</body>
+</html>
