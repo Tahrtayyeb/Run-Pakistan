@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+User-agent: Googlebot
+Allow: /blog/
+Disallow: /archive/
+Disallow: /images/
+Disallow: /scripts/
+Sitemap: https://runpakistan.com/sitemap.xml
